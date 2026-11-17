@@ -1,0 +1,9 @@
+# No-key experiments (01, 02, 03, 05)
+tiktoken
+transformers
+torch
+
+# Pick ONE provider for 04_five_levers.py (or install all three)
+google-genai      # Gemini  (free tier)   GEMINI_API_KEY
+openai            # OpenAI  (paid)        OPENAI_API_KEY
+anthropic         # Claude  (paid)        ANTHROPIC_API_KEY

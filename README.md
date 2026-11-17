@@ -6,6 +6,7 @@ AI & tech, drawn easy. Each episode gets its own folder: small, readable, and yo
 | Episode | Topic | Code |
 |---|---|---|
 | Ep 1 | Everyone Says AI Agents Will Replace Jobs. Nobody Tells You Why. | [`ep01-ai-agents/`](ep01-ai-agents/): a tiny agent with all 5 pillars (brain, hands, memory, loop, guardrails) |
+| Ep 2 | LLMs Explained: What's Really Inside ChatGPT (and How to Use It) | [`ep02-llm-basics/`](ep02-llm-basics/): tokens, real next-token probabilities, the temperature dial, the 5 levers on Gemini / OpenAI / Claude |
 
 ## Quick start
 ```
