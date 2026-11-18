@@ -28,11 +28,15 @@ model.eval()
 
 
 def next_token_probs(text):
-    """Return (probabilities for every token in the vocabulary) for the token that comes after `text`."""
-    ids = tokenizer(text, return_tensors="pt").input_ids
+    """Probabilities for the token after `text`."""
+    # 1. text -> tokens (numbers)
+    ids = tokenizer(text, return_tensors="pt")
+    ids = ids.input_ids
+    # 2. a score for EVERY possible next token
     with torch.no_grad():
-        logits = model(ids).logits[0, -1]          # one score per possible next token (~50,000 of them)
-    return torch.softmax(logits, dim=-1)           # scores -> probabilities that add up to 100%
+        scores = model(ids).logits[0, -1]
+    # 3. scores -> percentages (they add to 100%)
+    return torch.softmax(scores, dim=-1)
 
 
 def bar(p, width=40):
